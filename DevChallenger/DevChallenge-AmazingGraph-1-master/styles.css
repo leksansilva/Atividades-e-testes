@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("/assets/fonts/Roboto-Regular.ttf");
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  padding: 50px;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.navegacao {
+  display: flex;
+  gap: 32px;
+  font-weight: 500;
+  font-size: 22px;
+  color: #766f68;
+}
+
+.titulo {
+  color: #d2872c;
+  font-weight: 800;
+}
+
+.conteudo {
+  display: flex;
+  word-break: keep-all;
+  width: 100vw;
+}
+.titulo2 {
+  color: #766f68;
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding-left: 100px;
+  align-items: baseline;
+  text-align: left;
+  gap: 25px;
+}
+.subtitulo {
+  margin-right: 100px;
+}
+.subtitulo {
+  color: #766f68;
+  font-size: 25px;
+  text-align: left;
+}
+
+.botao {
+  margin-top: 30px;
+  font-size: 22px;
+  padding: 24px 90px 16px 90px;
+  border: none;
+  background-color: #d2872c;
+  color: #ffff;
+  border-radius: 15px;
+  font-weight: 600;
+}
+
+.imagem {
+  position: absolute;
+  width: 700px;
+  height: auto;
+  z-index: -1;
+  left: 420px;
+  bottom: 20px;
+}
