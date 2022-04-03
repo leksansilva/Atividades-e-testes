@@ -1,0 +1,18 @@
+
+Guia do HTML e CSS
+Estamos dando os nossos primeiros passos com desenvolvimento Web e aprendendo a criar uma página do ZERO!
+
+Download do Material
+Preencha o formulário abaixo para ter acesso ao material completo da disciplina.
+
+Crie uma página Web do ZERO
+Sem precisar de conhecimento prévio, estamos aprendendo a construir uma página Web do zero igual a essa!
+
+
+Dê seus primeiros passos com HTML
+Conheça a estrutura de um documento HTML na prática, além de conhecer diversas tags e suas funções.
+
+
+
+Dê identidade a sua página com CSS
+Aprenda a utilizar o CSS para formatar o seu projeto, proporcionando uma identidade própria para sua página!

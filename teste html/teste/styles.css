@@ -1,0 +1,35 @@
+.wave {
+  border:0px;
+  position: relative;
+  height: 70px;
+  width: 100%;
+  background: white;
+}
+
+.wave:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  border-style: groove hidden hidden hidden;
+  border-color: #ff0000;
+  width: 57%;
+  height: 80px;
+  background-color: white;
+  right: 0px;
+  top: 40px;
+}
+
+.wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  border-style: hidden hidden groove hidden;
+  border-color: #ff0000;
+  width: 50%;
+  height: 70px;
+  background-color: white;
+  left: 0;
+  top: 27px;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>UNEB Code</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <img class="logo" src="/imgs/logo.png" alt="logo" />
+      </div>
+    </header>
+    <main>
+      <section class="left">
+        <h1 class="title">Guia do HTML e CSS</h1>
+        <p class="description">
+          Estamos dando os nossos primeiros passos com desenvolvimento Web e
+          aprendendo a criar uma página do ZERO!
+        </p>
+        <img src="imgs/imgCircular.png" alt="guia do HTML e CSS" />
+      </section>
+      <section class="right">
+        <form class="form">
+          <h3 class="form-title">Download do Material</h3>
+          <p class="form-description">
+            Preencha o formulário abaixo para ter acesso ao material completo da
+            disciplina.
+          </p>
+          <label for="name">Nome*</label><br />
+          <input
+            r
+            class="form-control"
+            type="text"
+            required
+            type="text"
+            id="name"
+            name="Nome"
+          />
+          <label for="email">Email*</label><br />
+          <input
+            class="form-control"
+            required
+            type="text"
+            id="email"
+            name="email"
+          />
+          <label for="city">Cidade*</label><br />
+          <input
+            class="form-control"
+            required
+            type="text"
+            id="city"
+            name="city"
+          />
+
+          <p class="form-description">
+            Você gostaria de receber new sobre TI, Negócios e Inovação?*
+          </p>
+          <input type="checkbox" id="yes" checked />
+          <label for="yes">Sim</label><br />
+          <input type="checkbox" id="no" />
+          <label for="yes">Não</label><br /><br />
+          <label for="question">10 + 10 = ?</label><br />
+          <input class="form-control" type="text" id="question" />
+          <input type="checkbox" id="form-accept" />
+          <label for="form-accept">Eu concordo em receber comununicações</label>
+          <p class="form-description">
+            Ao informar meu dados, eu concordo com a
+            <a href="#">Política de Privacidade</a>.
+          </p>
+          <button type="submit" class="btn-submit">
+            Acessar o Material agora!
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <section class="infos">
+        <article class="infos-container">
+          <img src="imgs/webDoZero.png" alt="web do zero" />
+          <h4>Crie uma página Web do ZERO</h4>
+          <p>
+            Sem precisar de conhecimento prévio, estamos aprendendo a construir
+            uma página Web do zero igual a essa!
+          </p>
+        </article>
+        <article class="infos-container">
+          <img src="imgs/html5.png" alt="html5" />
+          <h4>Dê seus primeiros passos com HTML</h4>
+          <p>
+            Conheça a estrutura de um documento HTML na prática, além de
+            conhecer diversas tags e suas funções.
+          </p>
+        </article>
+        <article class="infos-container">
+          <img src="imgs/css3.png" alt="css3" />
+          <h4>Dê identidade a sua página com CSS</h4>
+          <p>
+            Aprenda a utilizar o CSS para formatar o seu projeto, proporcionando
+            uma identidade própria para sua página!
+          </p>
+        </article>
+      </section>
+      <section class="copyright">
+        <p>Copyright &copy; SIN036 UNEB</p>
+      </section>
+    </footer>
+  </body>
+</html>

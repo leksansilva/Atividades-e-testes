@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Sarala", sans-serif;
+}
+header {
+  height: 150px;
+  padding: 20px;
+}
+.wrapper {
+  height: 100%;
+}
+.wrapper > img {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+}
+
+main {
+  display: flex;
+  background-color: #407094;
+  padding: 100px;
+  gap: 30px;
+}
+
+.left {
+  width: 50%;
+  text-align: center;
+  color: #fff;
+}
+.title {
+  font-size: 30px;
+}
+.description {
+  font-size: 18px;
+  padding: 45px;
+}
+
+.right {
+  width: 50%;
+}
+
+.form {
+  background-color: #ebebeb;
+  border-radius: 10px;
+  height: 100%;
+  width: 450px;
+  padding: 30px;
+  color: #707070;
+}
+
+
+.form-description{
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+
+.form-control {
+  width: 100%;
+  border: none;
+  height: 40px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+
+}
+.form-control:focus{
+  outline: .2px solid #707070;
+}
+
+.form-description>a{
+  color: #707070;
+}
+
+.btn-submit{
+  color: #ffffff;
+  background-color: #FF9900;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 25px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+footer{
+  padding: 20px 70px;
+}
+.infos{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.infos-container{
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 40px;
+}
+
+.infos-container>img{
+  display:block;
+  margin: 0 auto;
+  width: 170px;
+  height: auto;
+}
+.copyright{
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
