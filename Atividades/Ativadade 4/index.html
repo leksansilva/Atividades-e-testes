@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
     <title>UNEB Code</title>
   </head>
   <body>
@@ -14,7 +15,7 @@
       </div>
     </header>
     <main>
-      <section class="left">
+      <section id="left" class="left">
         <h1 class="title">Guia do HTML e CSS</h1>
         <p class="description">
           Estamos dando os nossos primeiros passos com desenvolvimento Web e
@@ -23,7 +24,7 @@
         <img src="imgs/imgCircular.png" alt="guia do HTML e CSS" />
       </section>
       <section class="right">
-        <form class="form">
+        <form onsubmit="onSubmit(event)" class="form">
           <h3 class="form-title">Download do Material</h3>
           <p class="form-description">
             Preencha o formulário abaixo para ter acesso ao material completo da
@@ -31,13 +32,12 @@
           </p>
           <label for="name">Nome*</label><br />
           <input
-            r
             class="form-control"
             type="text"
             required
             type="text"
             id="name"
-            name="Nome"
+            name="name"
           />
           <label for="email">Email*</label><br />
           <input
@@ -59,13 +59,13 @@
           <p class="form-description">
             Você gostaria de receber new sobre TI, Negócios e Inovação?*
           </p>
-          <input type="checkbox" id="yes" checked />
+          <input type="radio" id="yes" name="news" value="1" checked />
           <label for="yes">Sim</label><br />
-          <input type="checkbox" id="no" />
+          <input type="radio" id="no" name="news" value="0"/>
           <label for="yes">Não</label><br /><br />
-          <label for="question">10 + 10 = ?</label><br />
-          <input class="form-control" type="text" id="question" />
-          <input type="checkbox" id="form-accept" />
+          <label for="question">Em QUANTOS meses pretende terminar o conteúdo do Material?</label><br />
+          <input class="form-control" type="number" id="question"  name="question" />
+          <input type="checkbox" id="form-accept" name="form-accept" />
           <label for="form-accept">Eu concordo em receber comununicações</label>
           <p class="form-description">
             Ao informar meu dados, eu concordo com a
@@ -75,6 +75,18 @@
             Acessar o Material agora!
           </button>
         </form>
+      </section>
+      <section id="form-submit" style="display: none">
+        <div class="form">
+          <span>Nome:</span>
+          <span id="nameOk"> </span><br>
+          <span>Email:</span>
+          <span  id="emailOk"> </span><br>
+          <span>Cidade:</span>
+          <span id="cityOk"></span><br><br>
+          <h4> PLANEJAMENTO DE ESTUDOS</h4><br>
+          <p id="plano"></p>
+        </div>
       </section>
     </main>
     <footer>
