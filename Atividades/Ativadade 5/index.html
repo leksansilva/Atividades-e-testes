@@ -15,22 +15,14 @@
       </div>
     </header>
     <main>
-      <section id="left" class="left">
-        <h1 class="title">Guia do HTML e CSS</h1>
-        <p class="description">
-          Estamos dando os nossos primeiros passos com desenvolvimento Web e
-          aprendendo a criar uma página do ZERO!
-        </p>
-        <img src="imgs/imgCircular.png" alt="guia do HTML e CSS" />
-      </section>
-      <section class="right">
-        <form onsubmit="onSubmit(event)" class="form">
+      <section class="left">
+        <form onsubmit="onSubmit(event)" id="form" class="form">
           <h3 class="form-title">Download do Material</h3>
           <p class="form-description">
             Preencha o formulário abaixo para ter acesso ao material completo da
             disciplina.
           </p>
-          <label for="name">Nome*</label><br />
+          <label for="name">Nome:</label><br />
           <input
             class="form-control"
             type="text"
@@ -39,7 +31,7 @@
             id="name"
             name="name"
           />
-          <label for="email">Email*</label><br />
+          <label for="email">E-mail:</label><br />
           <input
             class="form-control"
             required
@@ -47,66 +39,52 @@
             id="email"
             name="email"
           />
-          <label for="city">Cidade*</label><br />
+          <label for="city">Matrícula:</label><br />
           <input
             class="form-control"
             required
             type="text"
-            id="city"
-            name="city"
+            id="registration"
+            name="registration"
           />
-
-          <p class="form-description">
-            Você gostaria de receber new sobre TI, Negócios e Inovação?*
-          </p>
-          <input type="radio" id="yes" name="news" value="1" checked />
-          <label for="yes">Sim</label><br />
-          <input type="radio" id="no" name="news" value="" />
-          <label for="yes">Não</label><br /><br />
-          <label for="question"
-            >Em QUANTOS meses pretende terminar o conteúdo do Material?</label
-          ><br />
+          <label for="city">Score:</label><br />
           <input
             class="form-control"
-            type="number"
-            id="question"
-            name="question"
+            required
+            type="text"
+            id="score"
+            name="score"
           />
-          <input type="checkbox" id="form_accept" name="form_accept" />
-          <label for="form-accept">Eu concordo em receber comununicações</label>
-          <p class="form-description">
-            Ao informar meu dados, eu concordo com a
-            <a href="#">Política de Privacidade</a>.
-          </p>
-          <button type="submit" class="btn-submit">
-            Acessar o Material agora!
-          </button>
+          <div class="form-group">
+            <button type="submit" id="submit" class="btn btn-submit">
+              Salvar
+            </button>
+            <button
+              type="reset"
+              onclick="handleReset()"
+              id="reset"
+              class="btn btn-reset"
+            >
+              Cancelar
+            </button>
+          </div>
         </form>
       </section>
-      <section id="form-submit" style="display: none">
-        <div class="form">
-          <h4>INFORMAÇÕES CADASTRADAS:</h4>
-          <br />
-          <span>Nome:</span>
-          <span id="nameOk"> </span><br />
-          <span>Email:</span>
-          <span id="emailOk"> </span><br />
-          <span>Cidade:</span>
-          <span id="cityOk"></span><br /><br />
-          <h4>PLANEJAMENTO DE ESTUDOS</h4>
-          <br />
-          <p id="plano"></p>
-          <br /><br />
-          <h4>NOSSAS NOVIDADES</h4>
-          <br />
-          <p>
-            Você optou por<span id="optionOk"></span>notificações sobre nossas
-            novidades tecnológicas.
-          </p>
-          <br /><br />
-          <h4>SOBRE NOSSA POLÍTICA DE PRIVACIDADE</h4>
-          <br />
-          <p id="privacyOk"></p>
+      <section class="right">
+        <div class="form result">
+          <div class="wrapper-result">
+            <table class="table" border="1" cellpadding="1">
+              <thead>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Matrícula</th>
+                <th>Score</th>
+                <th>Ações</th>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
         </div>
       </section>
     </main>

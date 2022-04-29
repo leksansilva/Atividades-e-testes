@@ -96,12 +96,10 @@ ol {
 
 footer {
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   background-color: #000;
   color: #fff;
   height: 60px;
-  position: sticky;
-  bottom: 0;
   width: 100%;
 }
