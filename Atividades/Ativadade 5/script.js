@@ -1,13 +1,12 @@
 //var dataTable = [];
 var id = 1;
-const setData = (value) => value;
 const onSubmit = (ev) => {
   ev.preventDefault();
   const data = new FormData(ev.currentTarget);
 
-  var values = setData({ id });
+  var values = { id };
   data.forEach((value, name) => {
-    values = setData({ ...values, [name]: value });
+    values = { ...values, [name]: value };
   });
   //dataTable.push(values);
   id++;
@@ -19,7 +18,7 @@ const showData = (values) => {
   const valuesArray = Object.entries(values);
   document.getElementById("tbody").innerHTML += `
     <tr id="tr${values.id}">
-    ${valuesArray.map((value) => `<td>${value[1]}</td>`).join("")}
+    ${valuesArray.map((value) => `<td>${value[1]}</td>`).join("\n")}
       <td>
         <button 
           class='btn btn-option' 
@@ -58,9 +57,9 @@ const setOldValues = (values) => {
 
 const setNewValues = (oldId, tr) => {
   const form = document.getElementById("form");
-  var newValues = setData({ id: oldId });
+  var newValues = { id: oldId };
   for (const i of form.children) {
-    if (i.id) newValues = setData({ ...newValues, [i.name]: i.value });
+    if (i.id) newValues = { ...newValues, [i.name]: i.value };
   }
   /* dataTable  = dataTable.map((value) =>
     value.id === id ? (value = newValues) : value
@@ -68,7 +67,7 @@ const setNewValues = (oldId, tr) => {
   const valuesArray = Object.entries(newValues);
 
   tr.innerHTML = `
-  ${valuesArray.map((value) => `<td>${value[1]}</td>`).join("")}
+  ${valuesArray.map((value) => `<td>${value[1]}</td>`).join("\n")}
   <td>
     <button class='btn btn-option' onclick='handleEdit(${
       newValues.id
