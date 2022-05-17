@@ -1,41 +1,57 @@
-//var dataTable = [];
-var id = 1;
-const onSubmit = (ev) => {
+const api = new axios.create({
+  baseURL: "http://localhost:8081",
+});
+
+const onSubmit = async (ev) => {
   ev.preventDefault();
   const data = new FormData(ev.currentTarget);
 
-  var values = { id };
+  var values = {};
   data.forEach((value, name) => {
     values = { ...values, [name]: value };
   });
-  //dataTable.push(values);
-  id++;
-  showData(values);
+  await api.post("/alunos", values).then((response) => {
+    if (response.status == 200) {
+      alert(response.data);
+    }
+  });
+  showData();
   reset();
 };
 
-const showData = (values) => {
-  const valuesArray = Object.entries(values);
-  document.getElementById("tbody").innerHTML += `
-    <tr id="tr${values.id}">
-    ${valuesArray.map((value) => `<td>${value[1]}</td>`).join("\n")}
+const showData = async () => {
+  var alunosArray = [];
+  await api.get("/alunos").then((response) => {
+    alunosArray = response.data;
+    console.log("alunos solicitados", alunosArray);
+  });
+  document.getElementById("tbody").innerHTML = " ";
+  alunosArray.forEach((aluno) => {
+    const data = JSON.stringify(aluno);
+    const valuesArray = Object.entries(aluno);
+    document.getElementById("tbody").innerHTML += `
+    <tr id="tr${data.id}">
+    ${valuesArray.map(([key, value]) => `<td>${value}</td>`).join("\n")}
       <td>
         <button 
           class='btn btn-option' 
-          onclick='handleEdit(${values.id}, ${JSON.stringify(values)})'>
+          onclick='handleEdit(${data.id}, ${data})'
+        >
           Editar 
         </button>
         <button 
           class='btn btn-option' 
-          onclick='handleDelete(${values.id},tr${values.id})'>
+          onclick='handleDelete(${data.id},tr${data.id})'>
           Apagar
         </button>
       </td>
     </tr>
     `;
+  });
 };
 
 const handleEdit = (id, values) => {
+  console.log(values);
   const ID = parseInt(id);
   toggleButton(ID);
   // const values = dataTable.find((value) => value.id === ID);
@@ -104,3 +120,5 @@ const toggleButton = (id) => {
     button.removeAttribute("onclick");
   }
 };
+
+showData();
